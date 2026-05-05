@@ -3,96 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock de Kits - FCAV</title>
+    <title>The Card Cave - Stock</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #2d3436;
+            padding: 20px;
+            color: #fff;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 30px;
             border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             text-align: center;
-            width: 90%;
+            width: 100%;
             max-width: 400px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        h1 { font-size: 1.6rem; color: #4834d4; margin-bottom: 5px; }
-        .subtitle { font-size: 0.8rem; color: #764ba2; margin-bottom: 20px; font-weight: 600; }
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #f39c12;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.3);
+            object-fit: cover;
+        }
+
+        h1 { font-size: 1.8rem; color: #f39c12; margin-bottom: 5px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .subtitle { font-size: 0.8rem; color: #bdc3c7; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
         
         .kit-box {
-            background: #f0f2f5;
-            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
             border-radius: 20px;
-            margin: 20px 0;
-            border: 2px solid #eee;
+            margin-bottom: 20px;
         }
 
-        .details { font-size: 0.85rem; color: #636e72; margin-bottom: 15px; line-height: 1.4; }
+        h3 { color: #e74c3c; margin-bottom: 10px; }
+        .details { font-size: 0.85rem; color: #ecf0f1; margin-bottom: 15px; }
 
         .stock-tag {
-            background: #2ecc71;
-            color: white;
-            padding: 12px 25px;
+            background: #27ae60;
+            padding: 8px 20px;
             border-radius: 50px;
             font-weight: 800;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        .cart-section {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        label { font-size: 0.9rem; font-weight: 600; }
+
+        input[type="number"] {
+            width: 80px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         .btn-whatsapp {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             background: #25D366;
             color: white;
             text-decoration: none;
             padding: 18px;
             border-radius: 15px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            margin-top: 25px;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+            width: 100%;
         }
 
         .btn-whatsapp:hover {
-            transform: scale(1.03);
-            background: #1eb954;
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
         }
 
-        .footer-text { font-size: 0.7rem; color: #b2bec3; margin-top: 25px; }
+        .footer-text { font-size: 0.7rem; color: #7f8c8d; margin-top: 25px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1> ⋆.𐙚 𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙲𝙰𝚅𝙴 </h1>
-        <p class="subtitle">Disponibilidad en Tiempo Real</p>
+        <!-- Si subes tu imagen como logo.jpg al repo, se verá aquí -->
+        <img src="logo.jpg" alt="The Card Cave Logo" class="logo">
+        
+        <h1>𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙲𝙰𝚅𝙴</h1>
+        <p class="subtitle">Stock Real Time</p>
         
         <div class="kit-box">
             <h3>Kit Armor Sleeve</h3>
-            <p class="details">Incluye:<br><b>Sobre de la expansión perfect order + Protector Sleeve + Protector Duro</b></p>
-            <!-- CAMBIA EL NÚMERO AQUÍ ABAJO CUANDO VENDAS ALGO -->
+            <p class="details">Sobre Perfect Order + Sleeve + Protector Duro</p>
             <div class="stock-tag">35 DISPONIBLES</div>
         </div>
 
-        <a class="btn-whatsapp" href="https://wa.me/qr/SOHFNGR6BBYGG1">
-            Comprar por WhatsApp
+        <div class="cart-section">
+            <label>¿Cuántos kits deseas?</label>
+            <input type="number" id="cantidad" value="1" min="1" max="35">
+        </div>
+
+        <a class="btn-whatsapp" href="#" onclick="enviarPedido()">
+            🛒 Agregar y Pedir
         </a>
 
-        <p class="footer-text">Enviame la orden para proceder con la compra y la entrega:)</p>
+        <p class="footer-text">Envía la orden para proceder con la compra y entrega :)</p>
     </div>
 
+    <script>
+        function enviarPedido() {
+            const cantidad = document.getElementById('cantidad').value;
+            const numeroKits = 35; // Mantener igual al stock mostrado arriba
+            
+            // Reemplaza con tu link de QR o número directo si prefieres
+            const baseWa = "https://wa.me/qr/SOHFNGR6BBYGG1";
+            
+            // Creamos el mensaje personalizado
+            const texto = `¡Hola! Vengo de tu página de The Card Cave. Quisiera ordenar ${cantidad} Kit(s) Armor Sleeve. ¿Me confirmas para el pago?`;
+            const mensajeFinal = `https://wa.me/521XXXXXXXXXX?text=${encodeURIComponent(texto)}`; 
+            
+            // NOTA: Para que el mensaje funcione con el QR de WhatsApp es un poco distinto. 
+            // Si quieres que el mensaje ya vaya escrito, es mejor usar tu número directo:
+            // Ejemplo: https://wa.me/52834XXXXXXX?text=...
+            
+            window.location.href = mensajeFinal;
+        }
+    </script>
 </body>
 </html>
