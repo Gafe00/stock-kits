@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Kits</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f9; }
+        .card { background: white; padding: 20px; border-radius: 15px; shadow: 0 4px 8px rgba(0,0,0,0.1); display: inline-block; }
+        .stock { font-size: 2em; color: #2ecc71; font-weight: bold; }
+        .btn { display: inline-block; margin-top: 20px; padding: 15px 25px; background-color: #25d366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Kit de Protección</h2>
+        <p>(Sobre + Protector + Protector Duro)</p>
+        <div class="stock">15 disponibles</div>
+        <a id="wp-link" class="btn" href="#">Pedir por WhatsApp</a>
+    </div>
+
+    <script>
+        const telefono = "521234567890"; // Reemplaza con tu número (incluye código de país)
+        const mensaje = encodeURIComponent("¡Hola! Vi que tienes kits disponibles y me gustaría procesar un pedido.");
+        document.getElementById('wp-link').href = `https://wa.me/${telefono}?text=${mensaje}`;
+    </script>
+</body>
+</html>
