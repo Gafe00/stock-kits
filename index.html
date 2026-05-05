@@ -9,7 +9,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         
         body {
-            /* Degradado solicitado */
             background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
             min-height: 100vh;
             display: flex;
@@ -35,21 +34,20 @@
             border-radius: 50%;
             margin-bottom: 15px;
             object-fit: cover;
-            /* Orilla del círculo original */
             border: 4px solid #4834d4; 
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* Tipografía y color originales */
         h1 { font-size: 1.6rem; color: #4834d4; margin-bottom: 5px; }
         .subtitle { font-size: 0.8rem; color: #764ba2; margin-bottom: 20px; font-weight: 600; }
         
+        /* Recuadro del Kit con color llamativo */
         .kit-box {
-            background: #f0f2f5;
+            background: #fef1f8; /* Un tono rosado suave muy bonito */
             padding: 25px;
             border-radius: 20px;
             margin: 20px 0;
-            border: 2px solid #eee;
+            border: 2px solid #fc466b;
         }
 
         h3 { color: #d63031; margin-bottom: 5px; }
@@ -68,23 +66,26 @@
 
         .cart-section {
             margin: 20px 0;
-            padding: 15px;
+            padding: 20px;
             background: #fff;
             border-radius: 15px;
             border: 1px dashed #4834d4;
         }
 
-        label { display: block; margin-bottom: 10px; font-weight: 600; color: #4834d4; }
+        label { display: block; margin-bottom: 12px; font-weight: 600; color: #4834d4; }
 
+        /* Incrementador más visible y grande */
         input[type="number"] {
-            width: 80px;
-            padding: 8px;
-            border-radius: 10px;
-            border: 2px solid #4834d4;
+            width: 100px;
+            padding: 12px;
+            border-radius: 12px;
+            border: 3px solid #3f5efb;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: bold;
+            color: #3f5efb;
             outline: none;
+            background-color: #f0f4ff;
         }
 
         .btn-whatsapp {
@@ -111,8 +112,7 @@
 <body>
 
     <div class="container">
-        <!-- Imagen del logo en el repositorio -->
-        <img src="image_bfafd5.jpg" alt="The Card Cave Logo" class="logo">
+        <img src="logo.jpg" alt="The Card Cave Logo" class="logo">
         
         <h1>𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙲𝙰𝚅𝙴</h1>
         <p class="subtitle">Disponibilidad en Tiempo Real</p>
@@ -124,7 +124,7 @@
         </div>
 
         <div class="cart-section">
-            <label>¿Cuántos kits deseas?</label>
+            <label>CANTIDAD DE KITS:</label>
             <input type="number" id="cantidad" value="1" min="1" max="35">
         </div>
 
@@ -138,8 +138,7 @@
     <script>
         function enviarPedido() {
             const cantidad = document.getElementById('cantidad').value;
-            // Número configurado según tu link QR
-            const miTelefono = "8341111555"; 
+            const miTelefono = "8341111555"; // Cambia esto por tu número real
             const mensaje = encodeURIComponent(`¡Hola! Vengo de tu sistema. Quisiera ordenar ${cantidad} Kit(s) Armor Sleeve de The Card Cave.`);
             
             window.location.href = `https://wa.me/${miTelefono}?text=${mensaje}`;
