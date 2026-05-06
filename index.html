@@ -47,8 +47,8 @@
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             margin-bottom: 10px;
             object-fit: cover;
@@ -172,14 +172,15 @@
 
         <p class="footer-text">Entregas en FCAV - Ciudad Victoria & externas en punto medio</p>
     </div>
-
-    <script>
-        function enviarPedido() {
-            const cantidad = document.getElementById('cantidad').value;
-            const miTelefono = "528341111555"; 
-            const mensaje = encodeURIComponent(`¡Hola! Quisiera ordenar ${cantidad} Kit de Armor Sleeve en The Card Cave. De la colección de perfect order!!);
-            window.location.href = `https://wa.me/${miTelefono}?text=${mensaje}`;
-        }
-    </script>
+<script>
+    function enviarPedido() {
+        const cantidad = document.getElementById('cantidad').value;
+        const miTelefono = "528341111555"; 
+        // Aquí corregí el cierre de la comilla y el paréntesis:
+        const mensaje = encodeURIComponent(`¡Hola! Quisiera ordenar ${cantidad} Kit de Armor Sleeve en The Card Cave. De la colección de perfect order!!`);
+        
+        window.location.href = `https://wa.me/${miTelefono}?text=${mensaje}`;
+    }
+</script>
 </body>
 </html>
