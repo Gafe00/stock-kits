@@ -17,34 +17,7 @@
             padding: 20px;
         }
 
-        /* Contenedor con efecto Carta Holográfica */
-        .container {
-            background: linear-gradient(145deg, #FFE2DE 0%, #F2BDFF 50%, #FAD5CF 100%);
-            position: relative;
-            overflow: hidden;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        /* Brillo Holográfico */
-        .container::before {
-            content: "";
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: linear-gradient(150deg, transparent 50%, rgba(238, 207, 255) 50%, transparent 50%, rgba(231, 222, 255) 50%, transparent 60%);
-            animation: holo 6s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes holo {
-            from { transform: translateX(-20%) translateY(-10%); }
-            to { transform: translateX(10%) translateY(10%); }
-        }
+        
 
         .logo {
             width: 160px;
